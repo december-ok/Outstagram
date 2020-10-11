@@ -1,0 +1,19 @@
+{
+  "name": "outstagram",
+  "version": "1.0.0",
+  "description": "App like instagram",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/december-ok/Outstagram.git"
+  },
+  "author": "December",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/december-ok/Outstagram/issues"
+  },
+  "homepage": "https://github.com/december-ok/Outstagram#readme"
+}
