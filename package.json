@@ -4,7 +4,8 @@
   "description": "App like instagram",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js --exec babel-node"
+    "start": "nodemon index.js --exec babel-node",
+    "assets": "node-sass -w assets/scss/styles.scss static/styles.css"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
     "express": "^4.17.1",
     "helmet": "^4.1.1",
     "morgan": "^1.10.0",
+    "node-sass": "^4.14.1",
     "pug": "^3.0.0"
   },
   "devDependencies": {

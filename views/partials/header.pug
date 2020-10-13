@@ -1,2 +1,14 @@
 header.header
-  p1 Outstagram
+  .header__wrapper
+    .header__column
+      a(href='#')
+        i.fab.fa-instagram
+    .header__column
+      form(method="get")
+        input(type="text", placeholder="Search by term...", name="term")
+    .header__column
+      ul
+        li
+          a(href='#') Join
+        li
+          a(href='#') Login

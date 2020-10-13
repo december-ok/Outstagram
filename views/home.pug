@@ -1,4 +1,7 @@
-extends layouts/main.pug
+extends layouts/main
+include mixins/imagePostBlock
 
 block content
-  p1 This is Main
+  .home_posts
+    each item in posts
+      +imagePostBlock(item)
