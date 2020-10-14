@@ -7,5 +7,6 @@ mixin imagePostBlock(post={})
       span.article__text= post.article
     .likesPart
       i.fas.fa-heart
+      span.likes__count= ` ${post.likedUsers.length}`
     .timePart
     .commentPart

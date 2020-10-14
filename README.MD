@@ -2,4 +2,8 @@
 
 An app like Outstagram built with Nodejs
 
-- [ ] Everything
+- [ ] login
+- [ ] join
+- [ ] logout
+- [ ] search
+- [ ] users

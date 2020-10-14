@@ -14,6 +14,7 @@ const CHANGE_PASSWORD = '/change-password'
 // Post
 const POSTS = '/posts'
 const POST_DETAIL = '/:id'
+const UPLOAD_POST = '/upload-post'
 const EDIT_POST = '/edit-post'
 
 const routes = {
@@ -22,12 +23,15 @@ const routes = {
   join: JOIN,
   logout: LOGOUT,
   search: SEARCH,
+
   users: USERS,
   userDetail: USER_DETAIL,
   editProfile: EDIT_PROFILE,
   changePassword: CHANGE_PASSWORD,
+
   posts: POSTS,
   postDetail: POST_DETAIL,
+  uploadPost: UPLOAD_POST,
   editPost: EDIT_POST
 }
 

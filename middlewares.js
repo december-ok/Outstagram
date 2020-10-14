@@ -2,7 +2,7 @@ import routes from './routes'
 
 export const localMiddleWare = (req, res, next) => {
   res.locals.siteName = 'outstagram'
-  res.locals.authenticated = 0
+  res.locals.authenticated = false
   res.locals.routes = routes
   next()
 }
