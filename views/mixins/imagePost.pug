@@ -1,12 +1,10 @@
-mixin imagePostBlock(post={})
+mixin imagePost(post={})
   .imagePostBlock
     .imagePart
       img.image__thumbnail(src=`/${post.contentFiles[0]}`, alt="posted image")
     .articlePart
       span.article__author= post.author+" "
       span.article__text= post.article
-      if post.isLong
-        span.article__long= "...See More"
     .likesPart
       i.fas.fa-heart
       span.likes__count= ` ${post.likedUsers.length}`

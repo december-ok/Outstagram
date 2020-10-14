@@ -1,4 +1,5 @@
 extends layouts/main.pug
+include mixins/imagePost
 
 block content
-  p1 This is postdetail
+  +imagePost(post)
