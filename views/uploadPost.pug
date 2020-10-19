@@ -1,0 +1,10 @@
+extends layouts/main.pug
+
+block content
+  .form-container
+    form(action=`/posts${routes.uploadPost}`, method="post", enctype="multipart/form-data")
+      div.fileUpload
+        label(for="file") Image File
+        input(type="file", id="file", name="imageFile", required=true, accept="image/*")
+      textarea(name="article", placeholder="Article", required=true)
+      input(type="submit", value="Upload Post")

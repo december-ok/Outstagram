@@ -5,9 +5,9 @@ header.header
         i.fab.fa-instagram
     .header__column
       form(action=routes.search, method="get")
-        input(type="text", placeholder="Search by term...", name="term")
+        input(type="text", placeholder="Search everything!", name="term")
     .header__column
-      if authenticated === false
+      if !authenticated === false
         ul
           li
             a(href=routes.join) Join
@@ -16,8 +16,6 @@ header.header
       else
         ul
           li
-            a(href=`/posts/${routes.uploadPost}`) Post
+            a(href=`/posts${routes.uploadPost}`) Post
           li
-            a(href=`#`) Profile
-          li
-            a(href=routes.logout) Logout
+            a(href=`/users${routes.userDetail}`) Profile

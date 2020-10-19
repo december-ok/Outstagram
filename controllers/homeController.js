@@ -27,7 +27,7 @@ export const getHome = (req, res) => {
   const displayPosts = JSON.parse(JSON.stringify(posts))
   displayPosts.forEach((post, idx) => {
     if (post.article.length >= 100) {
-      displayPosts[idx].article = post.article.slice(0, 200)
+      displayPosts[idx].article = post.article.slice(0, 100)
       displayPosts[idx].isLong = true
     }
   })

@@ -1,12 +1,32 @@
+//-
+  mixin imagePost(post={})
+    .imagePostBlock
+      .authorPart
+        a(href="")
+          img.author__image(src=`/${post.author.avatarUrl}`)
+        a(href="")
+          span.author__name= post.author.name
+      .imagePart
+        img.image__thumbnail(src=`/${post.contentUrl}`, alt="posted image")
+      .articlePart
+        span.article__author= post.author.name+" "
+        span.article__text= post.article
+      .likesPart
+        i.fas.fa-heart
+        span.likes__count= ` ${post.likedUsers.length}`
+      .timePart
+      .commentPart
+
+
 mixin imagePost(post={})
   .imagePostBlock
     .imagePart
-      img.image__thumbnail(src=`/${post.contentFiles[0]}`, alt="posted image")
+      img.image__thumbnail(src=`/${post.contentUrl}`, alt="posted image")
     .articlePart
-      span.article__author= post.author+" "
       span.article__text= post.article
     .likesPart
       i.fas.fa-heart
-      span.likes__count= ` ${post.likedUsers.length}`
+      span.likes__count= `${post.likedUsers.length}`
     .timePart
     .commentPart
+    
