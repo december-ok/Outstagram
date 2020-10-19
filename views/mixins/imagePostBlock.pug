@@ -1,5 +1,10 @@
 mixin imagePostBlock(post={})
   .imagePostBlock
+    .authorPart
+      a(href="")
+        img.author__image(src=`/${post.authorImage}`)
+      a(href="")
+        span.author__name= post.author
     .imagePart
       img.image__thumbnail(src=`/${post.contentFiles[0]}`, alt="posted image")
     .articlePart

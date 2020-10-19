@@ -3,6 +3,7 @@ export const posts = [
   {
     id: 1,
     author: 'messi',
+    authorImage: './contents/user.png',
     contentsType: 0,
     // 0 is pictures, 1 is video
     contentFiles: [
@@ -19,6 +20,7 @@ export const posts = [
   {
     id: 2,
     author: 'pique',
+    authorImage: './contents/user.png',
     contentsType: 0,
     // 0 is pictures, 1 is video
     contentFiles: [
@@ -35,6 +37,7 @@ export const posts = [
   {
     id: 3,
     author: 'nalgangdo',
+    authorImage: './contents/user.png',
     contentsType: 0,
     // 0 is pictures, 1 is video
     contentFiles: [
@@ -53,6 +56,7 @@ export const posts = [
 export const users = [
   {
     id: 1,
-    name: 'hihi'
+    name: 'hihi',
+    userImage: './contents/user.png'
   }
 ]

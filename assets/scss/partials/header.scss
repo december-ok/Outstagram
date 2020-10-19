@@ -4,13 +4,13 @@
   background-color: white;
   width: 100%;
   box-shadow: 0px 3px 20px 0px grey;
-  .header__wrapper{
+  .header__wrapper{ 
     padding: 10px 0px;
     width: 100%;
-    max-width: 800px;
+    max-width: 375px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
     .header__column{
       i{
@@ -42,12 +42,12 @@
       }
       form{
         width: 100%;
-        input{
+        input{  
           width: 100%;
           padding: 7px 10px;
           border: white;
           border-radius: 5px;
-          box-shadow: 0px 0px 20px 2px gray;
+          box-shadow: 0px 0px 10px 2px gray;
         }
       }
     }

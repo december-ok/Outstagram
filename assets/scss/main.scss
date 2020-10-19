@@ -1,9 +1,16 @@
+html{
+  height: 100%;
+}
 body{
+  height: 100%;
   margin: 0px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   .under__header{
     margin: 0px auto;
-    width: 700px;
+    max-width: 375px;
     padding-top: 100px;
   }
+}
+main{
+  min-height: calc(100vh - 180px);
 }
