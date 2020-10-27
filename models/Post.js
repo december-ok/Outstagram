@@ -13,6 +13,7 @@ const PostSchema = new mongoose.Schema({
     type: String,
     required: 'article is REQUIRED'
   },
+  isLong: Boolean,
   likedUsers: [
     {
       type: mongoose.Schema.Types.ObjectId,

@@ -2,18 +2,23 @@ mixin imagePostBlock(post={})
   .imagePostBlock
     .authorPart
       a(href="")
-        img.author__image(src=`/${post.authorImage}`)
+        img.author__image(src=`/${post.author.avatarUrl}`)
       a(href="")
-        span.author__name= post.author
+        span.author__name= post.author.name
     .imagePart
-      img.image__thumbnail(src=`/${post.contentFiles[0]}`, alt="posted image")
+      img.image__thumbnail(src=`/${post.contentUrl}`, alt="posted image")
     .articlePart
-      span.article__author= post.author+" "
-      span.article__text= post.article
-      if post.isLong
-        span.article__long= "...See More"
-    .likesPart
-      i.fas.fa-heart
-      span.likes__count= ` ${post.likedUsers.length}`
-    .timePart
-    .commentPart
+      span.article__author= post.author.name+" "
+      a.articleDetail(href=routes.postDetail(post.id))
+        span.article__text= post.article
+        if post.isLong
+          span.article__long= "...See More"
+    .otherPart
+      .likesPart
+        i.fas.fa-heart
+        span.likes__count= `${post.likedUsers.length}`
+      .commentsPart
+        i.far.fa-comment-alt
+        span.comments__count= `${post.comments.length}`
+      .timePart
+        span.post__time= `${others.getDateForm(post.createdAt)}`

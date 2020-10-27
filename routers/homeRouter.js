@@ -5,9 +5,11 @@ import routes from '../routes'
 const homeRouter = express.Router()
 
 homeRouter.get(routes.join, getJoin)
-homeRouter.post(routes.join, postJoin)
+homeRouter.post(routes.join, postJoin, postLogin)
+
 homeRouter.get(routes.login, getLogin)
 homeRouter.post(routes.login, postLogin)
+
 homeRouter.get(routes.logout, getLogout)
 homeRouter.get(routes.search, getSearch)
 homeRouter.get(routes.home, getHome)

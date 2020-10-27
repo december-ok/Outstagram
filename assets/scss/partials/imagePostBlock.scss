@@ -31,23 +31,52 @@
     .article__author{
       font-weight: bold;
     }
-    .article__text{
-      
-    }
-    .article__long{
-      color: #333333;
-      font-weight: 700;
+    .articleDetail{
+      text-decoration: transparent;
+      .article__text{
+        color: black
+      }
+      .article__long{
+        color: #333333;
+        font-weight: 700;
+      }
     }
   }
-  .likesPart{
-    padding: 10px;
+  .otherPart{
     display: flex;
-    .fas.fa-heart{
-      background-image: radial-gradient(circle at 50% -20.71%, #de9c2c 0, #e5922a 8.33%, #ea852b 16.67%, #ee772d 25%, #f16731 33.33%, #f35436 41.67%, #f23c3c 50%, #f01843 58.33%, #ed004c 66.67%, #e90057 75%, #e30064 83.33%, #db0071 91.67%, #d10080 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      font-size: 20px;
+    .likesPart{
+      padding: 10px;
+      .fas.fa-heart{
+        background-image: radial-gradient(circle at 50% -20.71%, #de9c2c 0, #e5922a 8.33%, #ea852b 16.67%, #ee772d 25%, #f16731 33.33%, #f35436 41.67%, #f23c3c 50%, #f01843 58.33%, #ed004c 66.67%, #e90057 75%, #e30064 83.33%, #db0071 91.67%, #d10080 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-size: 20px;
+      }
+      .likes__count{
+        margin-left: 5px;
+        font-size: 20px;
+        font-weight: bold;
+      }
     }
-  }
+    .commentsPart{
+      padding: 10px;
+      .far.fa-comment-alt{
+        color: black;
+        font-size: 20px;
+      }
+      .comments__count{
+        margin-left: 5px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+    .timePart{
+      margin-top: 13px;
+      .post__time{
+        font-size: 15px;
+        font-weight: bold;
+      }
+    }
+  } 
 }

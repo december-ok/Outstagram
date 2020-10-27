@@ -1,4 +1,17 @@
 extends layouts/main.pug
 
 block content
-  p1 This is userdetail
+  .userDetailPage
+    .userProfileGrop
+      img.userImage(src=user.avatarUrl)
+      p.userNickname= user.name
+      p.userDescription= user.description
+      p.userArticles= user.posts.length
+      p.userComments= user.comments.length
+      p.userLiked= user.liked
+    .userControllerGroup
+      .buttonGroup
+        button.changeProfileButton= '✏️Change Profile'
+        button.changePassword= '🔐Change Password'
+        button.logoutButton= '🔑Logout'
+        button.removeAccount= '🛑Remove Account🛑'

@@ -7,7 +7,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
   body .under__header {
     width: 100%;
-    padding-top: 100px; }
+    padding-top: 80px; }
 
 main {
   min-height: calc(100vh - 180px); }
@@ -39,18 +39,41 @@ main {
     margin: 0px 10px; }
     .imagePostBlock .articlePart .article__author {
       font-weight: bold; }
-    .imagePostBlock .articlePart .article__long {
-      color: #333333;
-      font-weight: 700; }
-  .imagePostBlock .likesPart {
-    padding: 10px;
+    .imagePostBlock .articlePart .articleDetail {
+      text-decoration: transparent; }
+      .imagePostBlock .articlePart .articleDetail .article__text {
+        color: black; }
+      .imagePostBlock .articlePart .articleDetail .article__long {
+        color: #333333;
+        font-weight: 700; }
+  .imagePostBlock .otherPart {
     display: flex; }
-    .imagePostBlock .likesPart .fas.fa-heart {
-      background-image: radial-gradient(circle at 50% -20.71%, #de9c2c 0, #e5922a 8.33%, #ea852b 16.67%, #ee772d 25%, #f16731 33.33%, #f35436 41.67%, #f23c3c 50%, #f01843 58.33%, #ed004c 66.67%, #e90057 75%, #e30064 83.33%, #db0071 91.67%, #d10080 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      font-size: 20px; }
+    .imagePostBlock .otherPart .likesPart {
+      padding: 10px; }
+      .imagePostBlock .otherPart .likesPart .fas.fa-heart {
+        background-image: radial-gradient(circle at 50% -20.71%, #de9c2c 0, #e5922a 8.33%, #ea852b 16.67%, #ee772d 25%, #f16731 33.33%, #f35436 41.67%, #f23c3c 50%, #f01843 58.33%, #ed004c 66.67%, #e90057 75%, #e30064 83.33%, #db0071 91.67%, #d10080 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-size: 20px; }
+      .imagePostBlock .otherPart .likesPart .likes__count {
+        margin-left: 5px;
+        font-size: 20px;
+        font-weight: bold; }
+    .imagePostBlock .otherPart .commentsPart {
+      padding: 10px; }
+      .imagePostBlock .otherPart .commentsPart .far.fa-comment-alt {
+        color: black;
+        font-size: 20px; }
+      .imagePostBlock .otherPart .commentsPart .comments__count {
+        margin-left: 5px;
+        font-size: 20px;
+        font-weight: bold; }
+    .imagePostBlock .otherPart .timePart {
+      margin-top: 13px; }
+      .imagePostBlock .otherPart .timePart .post__time {
+        font-size: 15px;
+        font-weight: bold; }
 
 .header {
   position: fixed;
@@ -66,6 +89,7 @@ main {
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center; }
     .header .header__wrapper .header__column i {
+      padding-left: 5px;
       background-image: radial-gradient(circle at 50% -20.71%, #de9c2c 0, #e5922a 8.33%, #ea852b 16.67%, #ee772d 25%, #f16731 33.33%, #f35436 41.67%, #f23c3c 50%, #f01843 58.33%, #ed004c 66.67%, #e90057 75%, #e30064 83.33%, #db0071 91.67%, #d10080 100%);
       -webkit-background-clip: text;
       background-clip: text;
@@ -77,6 +101,7 @@ main {
     .header .header__wrapper .header__column:last-child {
       justify-self: end; }
     .header .header__wrapper .header__column ul {
+      padding-right: 5px;
       display: flex;
       color: transparent;
       font-weight: bold;
