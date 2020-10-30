@@ -12,7 +12,6 @@ export const localMiddleWare = (req, res, next) => {
   res.locals.user = req.user
   res.locals.others = others
 
-  console.log('user : ' + req.user)
   if (req.user) {
     res.locals.authenticated = true
   }

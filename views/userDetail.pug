@@ -1,17 +1,29 @@
 extends layouts/main.pug
+include mixins/miniPostBlock
 
 block content
   .userDetailPage
-    .userProfileGrop
+    .userProfileGroup
       img.userImage(src=user.avatarUrl)
       p.userNickname= user.name
       p.userDescription= user.description
-      p.userArticles= user.posts.length
-      p.userComments= user.comments.length
-      p.userLiked= user.liked
-    .userControllerGroup
-      .buttonGroup
-        button.changeProfileButton= '✏️Change Profile'
-        button.changePassword= '🔐Change Password'
-        button.logoutButton= '🔑Logout'
-        button.removeAccount= '🛑Remove Account🛑'
+    .userActivityGroup
+      i.far.fa-file-alt
+      i.far.fa-comment-alt
+      i.fas.fa-heart
+      a.userArticles= user.posts.length
+      a.userComments= user.comments.length
+      a.userLiked= user.liked
+    if findingUser.id === user.id
+      .userSimpleController
+        a.userControllerButton
+          button= '📋 Account Management'
+        a.logoutButton
+          button= '🔑 Logout'
+  .userPostsList
+    each item in findingUser.posts
+      +miniPostBlock(item)
+      +miniPostBlock(item)
+      +miniPostBlock(item)
+      +miniPostBlock(item)
+      +miniPostBlock(item)

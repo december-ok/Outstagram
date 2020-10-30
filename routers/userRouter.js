@@ -4,7 +4,7 @@ import routes from '../routes'
 
 const userRouter = express.Router()
 
-userRouter.get(routes.userDetail, getUserDetail)
+userRouter.get(routes.userDetail(), getUserDetail)
 userRouter.get(routes.editProfile, getEditProfile)
 userRouter.get(routes.changePassword, getChangePassword)
 

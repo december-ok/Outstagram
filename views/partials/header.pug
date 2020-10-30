@@ -18,4 +18,5 @@ header.header
           li
             a(href=`/posts${routes.uploadPost}`) Post
           li
-            a(href=`/users${routes.userDetail}`) Profile
+            a(href=`${routes.userDetail(user.id)}`)
+              img(src=user.avatarUrl)
