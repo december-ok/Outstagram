@@ -10,7 +10,7 @@ body {
     padding-top: 80px; }
 
 main {
-  min-height: calc(100vh - 180px); }
+  min-height: calc(100vh - 185px); }
 
 .imagePostBlock {
   min-width: 365px;
@@ -26,9 +26,11 @@ main {
       color: black; }
     .imagePostBlock .authorPart .author__image {
       width: 30px;
+      height: 30px;
+      object-fit: cover;
       border-radius: 50%; }
     .imagePostBlock .authorPart .author__name {
-      font-weight: bold;
+      font-weight: 500;
       margin-left: 10px; }
   .imagePostBlock .image__thumbnail {
     object-fit: cover;
@@ -38,14 +40,14 @@ main {
   .imagePostBlock .articlePart {
     margin: 0px 10px; }
     .imagePostBlock .articlePart .article__author {
-      font-weight: bold; }
+      font-weight: 500; }
     .imagePostBlock .articlePart .articleDetail {
       text-decoration: transparent; }
       .imagePostBlock .articlePart .articleDetail .article__text {
         color: black; }
       .imagePostBlock .articlePart .articleDetail .article__long {
         color: #333333;
-        font-weight: 700; }
+        font-weight: 500; }
   .imagePostBlock .otherPart {
     display: flex; }
     .imagePostBlock .otherPart .likesPart {
@@ -59,7 +61,7 @@ main {
       .imagePostBlock .otherPart .likesPart .likes__count {
         margin-left: 5px;
         font-size: 20px;
-        font-weight: bold; }
+        font-weight: 500; }
     .imagePostBlock .otherPart .commentsPart {
       padding: 10px; }
       .imagePostBlock .otherPart .commentsPart .far.fa-comment-alt {
@@ -68,12 +70,12 @@ main {
       .imagePostBlock .otherPart .commentsPart .comments__count {
         margin-left: 5px;
         font-size: 20px;
-        font-weight: bold; }
+        font-weight: 500; }
     .imagePostBlock .otherPart .timePart {
       margin-top: 13px; }
       .imagePostBlock .otherPart .timePart .post__time {
         font-size: 15px;
-        font-weight: bold; }
+        font-weight: 500; }
 
 .header {
   position: fixed;
@@ -82,6 +84,7 @@ main {
   box-shadow: 0px 3px 20px 0px grey; }
   .header .header__wrapper {
     padding: 0px 0px;
+    min-height: 80px;
     width: 100%;
     min-width: 375px;
     margin: 0 auto;
@@ -105,7 +108,7 @@ main {
       display: flex;
       align-items: center;
       color: transparent;
-      font-weight: bold;
+      font-weight: 500;
       text-transform: uppercase; }
       .header .header__wrapper .header__column ul a {
         font-size: 15px;
@@ -115,6 +118,8 @@ main {
         margin-right: 10px; }
       .header .header__wrapper .header__column ul img {
         height: 40px;
+        width: 40px;
+        object-fit: cover;
         border-radius: 20px;
         box-shadow: 0px 0px 10px 0px black; }
     .header .header__wrapper .header__column form {
@@ -149,7 +154,7 @@ main {
   width: 33vw;
   height: 33vw;
   object-fit: cover;
-  box-shadow: 0px 0px 10px 0px black;
+  box-shadow: 0px 0px 10px 0px gray;
   margin: 0px 0.15vw; }
 
 .wawa {
@@ -168,11 +173,13 @@ main {
       margin: auto;
       grid-row: 1 / 3;
       width: 100px;
+      height: 100px;
+      object-fit: cover;
       border-radius: 50px;
       box-shadow: 0px 0px 10px 0px black; }
     .userDetailPage .userProfileGroup .userNickname {
       margin: auto 0px;
-      font-weight: bold;
+      font-weight: 500;
       grid-column: 2 / 5; }
     .userDetailPage .userProfileGroup .userDescription {
       margin: auto 0px;
@@ -191,7 +198,7 @@ main {
       background-clip: text;
       color: transparent; }
     .userDetailPage .userActivityGroup a {
-      font-weight: bold;
+      font-weight: 500;
       font-size: 25px; }
   .userDetailPage .userSimpleController button {
     height: 30px;

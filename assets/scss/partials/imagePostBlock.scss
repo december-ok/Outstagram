@@ -13,10 +13,12 @@
     }
     .author__image{
       width: 30px;
+      height: 30px;
+      object-fit: cover;
       border-radius: 50%;
     }
     .author__name{
-      font-weight: bold;
+      font-weight: 500;
       margin-left: 10px;
     }
   }
@@ -29,7 +31,7 @@
   .articlePart{
     margin: 0px 10px;
     .article__author{
-      font-weight: bold;
+      font-weight: 500;
     }
     .articleDetail{
       text-decoration: transparent;
@@ -38,7 +40,7 @@
       }
       .article__long{
         color: #333333;
-        font-weight: 700;
+        font-weight: 500;
       }
     }
   }
@@ -56,7 +58,7 @@
       .likes__count{
         margin-left: 5px;
         font-size: 20px;
-        font-weight: bold;
+        font-weight: 500;
       }
     }
     .commentsPart{
@@ -68,15 +70,15 @@
       .comments__count{
         margin-left: 5px;
         font-size: 20px;
-        font-weight: bold;
+        font-weight: 500;
       }
     }
     .timePart{
       margin-top: 13px;
       .post__time{
         font-size: 15px;
-        font-weight: bold;
+        font-weight: 500;
       }
     }
-  } 
+  }
 }

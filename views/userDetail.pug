@@ -16,14 +16,10 @@ block content
       a.userLiked= user.liked
     if findingUser.id === user.id
       .userSimpleController
-        a.userControllerButton
+        a(href=`/users${routes.userControll}`).userControllerButton
           button= '📋 Account Management'
-        a.logoutButton
+        a(href=routes.logout).logoutButton
           button= '🔑 Logout'
   .userPostsList
     each item in findingUser.posts
-      +miniPostBlock(item)
-      +miniPostBlock(item)
-      +miniPostBlock(item)
-      +miniPostBlock(item)
       +miniPostBlock(item)

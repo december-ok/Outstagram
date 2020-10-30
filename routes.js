@@ -9,6 +9,7 @@ const SEARCH = '/search'
 const USERS = '/users'
 const USER_DETAIL = '/:id'
 const EDIT_PROFILE = '/edit-profile'
+const USER_CONTROLL = '/user-controll'
 const CHANGE_PASSWORD = '/change-password'
 
 // Post
@@ -33,6 +34,7 @@ const routes = {
     }
   },
   editProfile: EDIT_PROFILE,
+  userControll: USER_CONTROLL,
   changePassword: CHANGE_PASSWORD,
 
   posts: POSTS,

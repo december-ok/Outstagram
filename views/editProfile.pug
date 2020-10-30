@@ -1,4 +1,11 @@
 extends layouts/main.pug
 
 block content
-  p1 This is edit profile
+  p.userName= user.name
+  .editProfilePage
+    form(action=`/users${routes.editProfile}`, method="post", enctype="multipart/form-data")
+      .fileUpload
+        label(for="file") Image File
+        input(type="file", id="file", name="imageFile", required=true, accept="image/*")
+      textarea(name="description", placeholder=user.description)
+      input(type="submit", value="Update Profile")

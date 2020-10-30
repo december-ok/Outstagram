@@ -3,7 +3,9 @@ extends layouts/main.pug
 block content
   .userControllPage
     .buttonGroup
-      button.changeProfileButton= '✏️Change Profile'
-      button.changePassword= '🔐Change Password'
-      button.logoutButton= '🔑Logout'
-      button.removeAccount= '🛑Remove Account🛑'
+      a(href=`/users${routes.editProfile}`).editProfileButton
+        button= '✏️Edit Profile'
+      a(href=`/users${routes.changePassword}`).changePassword
+        button= '🔐Change Password'
+      a(href=`/users${routes.removeAccount}`).removeAccount
+        button= '🛑Remove Account🛑'

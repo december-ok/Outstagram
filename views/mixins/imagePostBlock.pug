@@ -2,7 +2,7 @@ mixin imagePostBlock(post={})
   .imagePostBlock
     .authorPart
       a(href="")
-        img.author__image(src=`/${post.author.avatarUrl}`)
+        img.author__image(src=`${post.author.avatarUrl}`)
       a(href="")
         span.author__name= post.author.name
     .imagePart

@@ -8,7 +8,8 @@ const postRouter = express.Router()
 postRouter.get(routes.uploadPost, getUploadPost)
 postRouter.post(routes.uploadPost, uploadImage, postUploadPost)
 
-postRouter.get(routes.postDetail(), getPostDetail)
 postRouter.get(routes.editPost, getEditPost)
+
+postRouter.get(routes.postDetail(), getPostDetail)
 
 export default postRouter

@@ -27,7 +27,6 @@ app.use('/static', express.static('static'))
 app.use(bodyParser.json())
 app.use(cookieParser())
 app.use(bodyParser.urlencoded({ extended: true }))
-app.set('view engine', 'pug')
 app.use(
   session({
     secret: process.env.COOKIE_SECRET,
@@ -44,12 +43,15 @@ app.use(passport.session())
 
 app.use(localMiddleWare)
 
+app.set('view engine', 'pug')
+
 app.use(routes.home, homeRouter)
 app.use(routes.users, userRouter)
 app.use(routes.posts, postRouter)
 
 // Redirect wrong path to home
 app.use('/:wrong_path', (req, res) => {
+  console.log('!!!!!!!!!!!!!!!!!!!!!!!!!')
   res.redirect(routes.home)
 })
 
