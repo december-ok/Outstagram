@@ -1,17 +1,23 @@
 mixin imagePost(post={})
-   .imagePostBlock
+  .imagePostBlock
     .authorPart
-      a(href="")
-        img.author__image(src=`/${post.author.avatarUrl}`)
-      a(href="")
+      a(href=routes.userDetail(post.author.id))
+        img.author__image(src=`${post.author.avatarUrl}`)
+      a(href=routes.userDetail(post.author.id))
         span.author__name= post.author.name
     .imagePart
       img.image__thumbnail(src=`/${post.contentUrl}`, alt="posted image")
     .articlePart
       span.article__author= post.author.name+" "
-      span.article__text= post.article
-    .likesPart
-      i.fas.fa-heart
-      span.likes__count= ` ${post.likedUsers.length}`
-    .timePart
-    .commentPart
+      span.articleDetail
+        span.article__text= post.article
+    .otherPart
+      .likesPart
+        i.fas.fa-heart
+        span.likes__count= `${post.likedUsers.length}`
+      .commentsPart
+        i.far.fa-comment-alt
+        span.comments__count= `${post.comments.length}`
+      .timePart
+        span.post__time= `${others.getDateForm(post.createdAt)}`
+      

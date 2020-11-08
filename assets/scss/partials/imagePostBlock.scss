@@ -36,7 +36,8 @@
     .articleDetail{
       text-decoration: transparent;
       .article__text{
-        color: black
+        color: black;
+        word-break: break-all;
       }
       .article__long{
         color: #333333;
@@ -78,6 +79,17 @@
       .post__time{
         font-size: 15px;
         font-weight: 500;
+      }
+    }
+    .removePart{
+      margin-left: 5px;
+      margin-top: 10px;
+      i{
+        padding: 5px;
+        background-color: #bfbfbf;
+        border-radius: 40%;
+        font-size: 20px;
+        color: black;
       }
     }
   }

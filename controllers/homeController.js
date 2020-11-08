@@ -62,7 +62,7 @@ export const getHome = async (req, res) => {
 
     posts.forEach((post, idx) => {
       if (post.isLong) {
-        posts[idx].article = post.article.slice(0, 100)
+        posts[idx].article = post.article.slice(0, 80)
       }
     })
   } catch (error) {

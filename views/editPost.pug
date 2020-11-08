@@ -1,4 +1,11 @@
 extends layouts/main.pug
 
 block content
-  p1 This is editpsot
+  .editPostPage
+    .editPostPart
+      form(action=`${routes.editPost(post.id)}`, method="post")
+        textarea(name='article')= post.article
+        input(type='submit', value='Update Post')
+    .deletePostPart
+      a.deletePostButton(href=routes.deletePost(post.id))
+        button= '🛑Delete Post🛑'

@@ -16,7 +16,8 @@ const CHANGE_PASSWORD = '/change-password'
 const POSTS = '/posts'
 const POST_DETAIL = '/:id'
 const UPLOAD_POST = '/upload-post'
-const EDIT_POST = '/edit-post'
+const EDIT_POST = '/:id/edit-post'
+const DELETE_POST = '/:id/delete-post'
 
 const routes = {
   home: HOME,
@@ -46,7 +47,20 @@ const routes = {
     }
   },
   uploadPost: UPLOAD_POST,
-  editPost: EDIT_POST
+  editPost: (id) => {
+    if(id){
+      return '/posts/' + id + '/edit-post'
+    } else {
+      return EDIT_POST
+    }
+  },
+  deletePost: (id) => {
+    if(id){
+      return '/posts/' + id + '/delete-post'
+    } else {
+      return DELETE_POST
+    }
+  }
 }
 
 export default routes

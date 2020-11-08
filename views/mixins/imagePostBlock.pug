@@ -1,9 +1,9 @@
 mixin imagePostBlock(post={})
   .imagePostBlock
     .authorPart
-      a(href="")
+      a(href=routes.userDetail(post.author.id))
         img.author__image(src=`${post.author.avatarUrl}`)
-      a(href="")
+      a(href=routes.userDetail(post.author.id))
         span.author__name= post.author.name
     .imagePart
       img.image__thumbnail(src=`/${post.contentUrl}`, alt="posted image")
@@ -22,3 +22,6 @@ mixin imagePostBlock(post={})
         span.comments__count= `${post.comments.length}`
       .timePart
         span.post__time= `${others.getDateForm(post.createdAt)}`
+      if user && post.author.id === user.id
+        a.removePart(href=routes.editPost(post.id))
+          i.fas.fa-pen

@@ -44,7 +44,8 @@ main {
     .imagePostBlock .articlePart .articleDetail {
       text-decoration: transparent; }
       .imagePostBlock .articlePart .articleDetail .article__text {
-        color: black; }
+        color: black;
+        word-break: break-all; }
       .imagePostBlock .articlePart .articleDetail .article__long {
         color: #333333;
         font-weight: 500; }
@@ -76,6 +77,15 @@ main {
       .imagePostBlock .otherPart .timePart .post__time {
         font-size: 15px;
         font-weight: 500; }
+    .imagePostBlock .otherPart .removePart {
+      margin-left: 5px;
+      margin-top: 10px; }
+      .imagePostBlock .otherPart .removePart i {
+        padding: 5px;
+        background-color: #bfbfbf;
+        border-radius: 40%;
+        font-size: 20px;
+        color: black; }
 
 .header {
   position: fixed;
