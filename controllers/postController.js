@@ -21,10 +21,6 @@ export const postUploadPost = async (req, res) => {
     isLong
   })
 
-  // add user's post list
-  req.user.posts.push(newPost.id)
-  req.user.save()
-
   res.redirect(routes.postDetail(newPost.id))
 }
 

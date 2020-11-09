@@ -1,22 +1,25 @@
 import routes from '../routes'
 import User from '../models/User'
+import Post from '../models/Post'
+import Comment from '../models/Comment'
+import { postEditPost } from './postController'
 
 export const getUserDetail = async (req, res) => {
   const { params: { id } } = req
   try {
     const findingUser = await User.findById(id)
-      .populate('posts')
     // show posts in latest order
-    findingUser.posts.sort((a, b) => {
-      if (a._id < b._id) {
-        return 1
-      } else {
-        return -1
-      }
-    })
+    const posts = await Post.find({ author: findingUser }).sort({ _id:-1 })
+    const comments = await Comment.find({ author: findingUser })
 
-    res.render('userDetail', { pageTitle: findingUser.name, findingUser })
+    res.render('userDetail', { 
+      pageTitle: findingUser.name, 
+      findingUser, 
+      posts, 
+      comments 
+    })
   } catch (error) {
+    console.log(error)
     res.redirect(routes.home)
   }
 }

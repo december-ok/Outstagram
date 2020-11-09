@@ -13,18 +13,6 @@ const UserSchema = new mongoose.Schema({
     type: String,
     default: '../contents/user.png'
   },
-  posts: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Post'
-    }
-  ],
-  comments: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Comment'
-    }
-  ],
   createdAt: {
     type: Date,
     default: Date.now
